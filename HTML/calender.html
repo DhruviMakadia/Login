@@ -32,17 +32,44 @@
                 <li class="active">
                     <a href="./calender.html">Calender</a>
                 </li>
+                <li>
+                    <a href="./reminder.html">Reminder</a>
+                </li>
             </ul>
         </nav>
     </div>
     <!-- Sidebar - end-->
 
     <div class="container col-md-8 calender-div">
-        <!-- <h1>Calender</h1> -->
         <div id="evoCalendar"></div>
     </div>
+
+    <!-- Bootstrap Modal for Adding Notes -->
+    <div class="modal fade" id="popupModal" tabindex="-1" aria-labelledby="popupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="popupModalLabel">Add Event Note</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Selected Date:</strong> <span id="selected-date"></span></p>
+                    <textarea id="event-note" class="form-control" placeholder="Add your note here..."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        id="close-popup">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="save-event">Save Event</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="../JS/calender/evo-calendar.min.js"></script>
     <script src="../JS/calender/calender-custom.js"></script>
 </body>
